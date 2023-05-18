@@ -1,4 +1,4 @@
-import WindowImage from './window.jpg';
+import WindowImage from './window.png';
 
 function initialDisplay() {
     const contentDiv = document.getElementById('content');
