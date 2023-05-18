@@ -1,3 +1,4 @@
+import './style.css';
 import { initialDisplay } from './display';
 import { handleSearch } from './input';
 
