@@ -24,7 +24,7 @@ function initialDisplay() {
     gif.id = 'weather-gif';
     gifContainer.appendChild(gif);
     windowDiv.appendChild(gifContainer);
-    getGif('static');
+    gifDisplay('static');
 
     const thermometerDiv = document.createElement('div');
     thermometerDiv.id = 'thermometer';
@@ -32,6 +32,13 @@ function initialDisplay() {
     thermometerDiv.appendChild(thermometerText);
     contentDiv.appendChild(thermometerDiv);
     temperatureDisplay('?', '?');
+}
+
+async function gifDisplay(condition) {
+    const gif = document.getElementById('weather-gif');
+    const currentGif = await getGif(condition);
+    gif.src = currentGif.source;
+    gif.alt = currentGif.text;
 }
 
 function temperatureDisplay(f, c) {
