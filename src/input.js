@@ -1,9 +1,9 @@
-import { getWeather } from './getweather';
+import { updateWeather } from './display';
 
 function handleSearch(e) {
     e.preventDefault();
     const locationInput = document.getElementById('location');
-    getWeather(locationInput.value);
+    updateWeather(locationInput.value);
 } 
 
 export { handleSearch }

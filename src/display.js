@@ -1,5 +1,6 @@
 import WindowImage from './window.png';
 import { getGif } from './getgif';
+import { getWeather } from './getweather';
 
 function initialDisplay() {
     const contentDiv = document.getElementById('content');
@@ -46,4 +47,10 @@ function temperatureDisplay(f, c) {
     thermometer.firstChild.textContent = `${f}\u00B0F ${c}\u00B0C`; 
 }
 
-export { initialDisplay, temperatureDisplay }
+async function updateWeather(location) {
+    const currentWeather = await getWeather(location);
+    gifDisplay(currentWeather.condition);
+    temperatureDisplay(currentWeather.temperatureF, currentWeather.temperatureC);
+}
+
+export { initialDisplay, updateWeather }
