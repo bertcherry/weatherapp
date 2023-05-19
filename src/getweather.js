@@ -1,4 +1,5 @@
-import { getGif } from "./getgif";
+import { getGif } from './getgif';
+import { temperatureDisplay } from './display';
 
 async function getWeather(location) {
     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=6b6b22d6fbcc46a9a70183239231705&q=${location}`, {mode: 'cors'});
@@ -11,6 +12,7 @@ async function getWeather(location) {
     }
     
     getGif(currentWeather.condition);
+    temperatureDisplay(currentWeather.temperatureF, currentWeather.temperatureC);
     return currentWeather;
 }
 

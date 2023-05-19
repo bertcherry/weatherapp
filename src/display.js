@@ -28,7 +28,15 @@ function initialDisplay() {
 
     const thermometerDiv = document.createElement('div');
     thermometerDiv.id = 'thermometer';
+    const thermometerText = document.createElement('div');
+    thermometerDiv.appendChild(thermometerText);
     contentDiv.appendChild(thermometerDiv);
+    temperatureDisplay('?', '?');
 }
 
-export { initialDisplay }
+function temperatureDisplay(f, c) {
+    const thermometer = document.getElementById('thermometer');
+    thermometer.firstChild.textContent = `${f}\u00B0F ${c}\u00B0C`; 
+}
+
+export { initialDisplay, temperatureDisplay }
