@@ -40,13 +40,13 @@ body, html {
     position: relative;
     flex-shrink: 0;
     width: 480px;
-    height: 420px;
+    height: 418px;
 }
 
 .img-container {
     position: absolute;
     /*top: -200px;*/
-    height: 420px;
+    height: 100%;
 }
 
 #window-container {
@@ -64,7 +64,7 @@ body, html {
 }
 
 #gif-container > img {
-    height: 420px;
+    height: 100%;
     object-fit: cover;
 }
 
