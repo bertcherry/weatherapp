@@ -37,13 +37,17 @@ body, html {
 
 .window-frame {
     position: relative;
-    width: 500px;
+    width: 480px;
 }
 
 .img-container {
     position: absolute;
     top: -200px;
     width: 100%;
+}
+
+#window-container {
+    z-index: 1;
 }
 
 .img-container > img {
@@ -55,7 +59,7 @@ body, html {
 }
 
 #gif-container > img {
-    width: 100%;
+    height: 420px;
 }
 
 #thermometer {
