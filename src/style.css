@@ -35,11 +35,26 @@ body, html {
     margin: 10px;
 }
 
+.window-frame {
+    position: relative;
+    width: 500px;
+}
+
 .img-container {
-    max-width: 500px;
+    position: absolute;
+    top: -200px;
+    width: 100%;
 }
 
 .img-container > img {
+    width: 100%;
+}
+
+#gif-container {
+    z-index: 0;
+}
+
+#gif-container > img {
     width: 100%;
 }
 
