@@ -27,6 +27,10 @@ body, html {
     --screen-border: #6f7675;
 }
 
+h1 {
+    text-align: center;
+}
+
 #content {
     display: flex;
     align-items: center;
