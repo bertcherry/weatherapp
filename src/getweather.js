@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 async function getWeather(location) {
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=6b6b22d6fbcc46a9a70183239231705&q=${location}`, {mode: 'cors'});
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_KEY}=${location}`, {mode: 'cors'});
     const weatherData = await response.json();
     
     const currentWeather = {
